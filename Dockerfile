@@ -29,9 +29,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Clone oneAPI samples (optional)
 RUN git clone -b master https://github.com/oneapi-src/oneAPI-samples.git /opt/oneAPI-samples
 
-# Source oneAPI environment
+# Source oneAPI environment using --force
 SHELL ["/bin/bash", "-c"]
-RUN echo "source /opt/intel/oneapi/setvars.sh" >> ~/.bashrc
+RUN source /opt/intel/oneapi/setvars.sh --force
 
 # Set default working directory
 WORKDIR /workspace
