@@ -1,12 +1,18 @@
 # 🥙 FOOD - FPGA environment setup On OneAPI with Docker
 
+## Initial Setup:
+```bash
+# 1. Install Docker (if not already installed)
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+# 2. Clone the repository
+git clone https://github.com/thomas-dsl-johnson/FOOD.git
+
 ## Option 1 - From Terminal: 
 
 ```bash
 # 1. Setting up container
-# Install Docker (if not already installed)
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
 # Pull 2025.0 oneAPI image
 sudo docker pull intel/oneapi-basekit:2025.0.2-0-devel-ubuntu24.04
 # Start container (replace <container_name> with a suitable name)
@@ -33,14 +39,11 @@ sudo docker start -ai <container_name>
 
 ## Option 2 - From Dockerfile: 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/thomas-dsl-johnson/FOOD.git
+# 1. Build from the Dockerfile
 cd FOOD
-
-# 2. Build from the Dockerfile
 sudo docker build -t intel-oneapi-fpga-dev:2025-custom .
 
-# 3. Run container (replace <container_name> with a suitable name)
+# 2. Run container (replace <container_name> with a suitable name)
 sudo docker run --name <container_name> -it -v ~/oneapi_fpga_2025:/workspace intel-oneapi-fpga-dev:2025-custom
 
 # We are done. Exit container.
