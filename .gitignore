@@ -1,0 +1,5 @@
+# Ignore everything in container_assets/
+container_assets/*
+
+# Keep container_assets/README.md
+!container_assets/README.md
