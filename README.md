@@ -8,6 +8,7 @@ sudo sh get-docker.sh
 
 # 2. Clone the repository
 git clone https://github.com/thomas-dsl-johnson/FOOD.git
+```
 
 ## Option 1 - From Terminal: 
 
