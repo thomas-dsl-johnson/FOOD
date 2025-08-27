@@ -1,5 +1,4 @@
-# 🥙 FOOD
-FPGA environment setup On OneAPI with Docker
+# 🥙 FOOD - FPGA environment setup On OneAPI with Docker
 
 ## Option 1 - From Terminal: 
 
