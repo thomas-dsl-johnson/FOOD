@@ -1,7 +1,7 @@
 # 🥙 FOOD
 FPGA environment setup On OneAPI with Docker
 
-## Option 1: 
+## Option 1 - From Terminal: 
 
 ```bash
 # 1. Setting up container
@@ -32,7 +32,7 @@ exit
 sudo docker start -ai <container_name>
 ```
 
-## Option 2: 
+## Option 2 - From Dockerfile: 
 ```bash
 # 1. Clone the repository
 git clone https://github.com/thomas-dsl-johnson/FOOD.git
