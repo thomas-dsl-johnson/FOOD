@@ -44,7 +44,10 @@ sudo docker start -ai <container_name>
 cd FOOD
 sudo docker build -t intel-oneapi-fpga-dev:2025-custom .
 
-# 2. Run container (replace <container_name> with a suitable name)
+# 2. Build custom image from Dockerfile
+docker build -t intel-oneapi-fpga-dev:2025-custom .
+
+# 3. Run container (replace <container_name> with a suitable name)
 sudo docker run --name <container_name> -it -v ~/oneapi_fpga_2025:/workspace intel-oneapi-fpga-dev:2025-custom
 
 # We are done. Exit container.
