@@ -12,7 +12,6 @@ sudo sh get-docker.sh
 sudo docker pull intel/oneapi-basekit:2025.0.2-0-devel-ubuntu24.04
 # Start container (replace <container_name> with a suitable name)
 sudo docker run --name <container_name> -it -v ~/oneapi_fpga_2025:/host_project intel/oneapi-basekit:2025.0.2-0-devel-ubuntu24.04 /bin/bash
-# In future you can start the container: sudo docker start -ai <container_name>
 
 # 2. Setup within container - ensure the basekit is installed, install the fpga add-on
 wget -O- https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB \
@@ -25,11 +24,32 @@ apt install intel-oneapi-compiler-fpga-2025.0
 # 3. Clone the samples repository
 git clone -b master https://github.com/oneapi-src/oneAPI-samples.git
 source /opt/intel/oneapi/setvars.sh
+
+# We are done. Exit container.
+exit
+
+# In future you can start the container easily
+sudo docker start -ai <container_name>
 ```
 
 ## Option 2: 
+```bash
+# 1. Clone the repository
+git clone https://github.com/thomas-dsl-johnson/FOOD.git
+cd FOOD
 
-TODO: Create Dockerfile
+# 2. Build from the Dockerfile
+sudo docker build -t intel-oneapi-fpga-dev:2025-custom .
+
+# 3. Run container (replace <container_name> with a suitable name)
+sudo docker run --name <container_name> -it -v ~/oneapi_fpga_2025:/workspace intel-oneapi-fpga-dev:2025-custom
+
+# We are done. Exit container.
+exit
+
+# In future you can start the container easily
+sudo docker start -ai <container_name>
+```
 
 ## Sources:
 
