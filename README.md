@@ -1,5 +1,15 @@
 # 🥙 FOOD - FPGA environment setup On OneAPI with Docker
 
+Welcome to **FOOD**, an acronym for "**FPGA environment setup On OneAPI with Docker**". This project is designed to simplify and streamline the creation of a containerized development environment for working with FPGAs using Intel's oneAPI toolkit. It addresses the common complexities of managing toolchain dependencies by using Docker to create a consistent, isolated, and reproducible workspace. Before you begin, you must have Docker installed on your host system and clone this repository.
+
+This guide presents two distinct pathways for setup: a manual approach from the terminal or an automated build using a Dockerfile.
+
+* **Option 1 (Manual Setup)** involves pulling a standard Intel oneAPI base image and then executing a series of shell commands inside the running container. This hands-on process guides you through adding the Intel `apt` repository and installing the necessary `intel-oneapi-base-toolkit` and `intel-oneapi-compiler-fpga` packages, followed by cloning the oneAPI samples repository. This method is transparent and allows for customisation at each step.
+
+* **Option 2 (Automated Setup)** uses the provided `Dockerfile` to build a custom, pre-configured image with a single command. This is the recommended approach for quickly generating a ready-to-use development environment, as it automates all the installation and configuration steps detailed in the first option.
+
+Regardless of the chosen method, the final outcome is a fully configured Docker container ready for development. Both options include a command to mount a local project directory into the container, ensuring that your work is preserved across sessions.
+
 ## Initial Setup:
 ```bash
 # 1. Install Docker (if not already installed)
