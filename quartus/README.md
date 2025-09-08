@@ -22,7 +22,7 @@ git clone https://github.com/thomas-dsl-johnson/FOOD.git
 
 ```bash
 # 1. Setting up container
-cd FOOD
+cd FOOD/quartus
 # Pull 2025.0 oneAPI image
 sudo docker pull intel/oneapi-basekit:2025.0.2-0-devel-ubuntu24.04
 # Start container (replace <container_name> with a suitable name)
@@ -57,7 +57,7 @@ sudo docker start -ai <container_name>
 ## Option 2 - From Dockerfile: 
 ```bash
 # 1. Build from the Dockerfile
-cd FOOD
+cd FOOD/quartus
 sudo docker build -t intel-oneapi-fpga-dev-w-quartus:2025-custom .
 
 # 2. Build custom image from Dockerfile
