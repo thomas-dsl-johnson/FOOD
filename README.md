@@ -67,7 +67,7 @@ exit
 sudo docker start -ai <container_name>
 ```
 
-n.b. For information on an installation with Quartus go to the [Quartus folder](https://github.com/thomas-dsl-johnson/FOOD/blob/main/README.md)
+n.b. For information on an installation with Quartus go to the [`quartus/`](https://github.com/thomas-dsl-johnson/FOOD/tree/main/quartus) folder of this repo.
 
 ## Sources:
 
