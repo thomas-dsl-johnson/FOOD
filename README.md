@@ -52,10 +52,9 @@ sudo docker start -ai <container_name>
 ```bash
 # 1. Build from the Dockerfile
 cd FOOD
-sudo docker build -t intel-oneapi-fpga-dev:2025-custom .
 
 # 2. Build custom image from Dockerfile
-docker build -t intel-oneapi-fpga-dev:2025-custom .
+sudo docker build -t intel-oneapi-fpga-dev:2025-custom .
 
 # 3. Run container (replace <container_name> with a suitable name)
 sudo docker run --name <container_name> -it -v ./container_assets:/workspace intel-oneapi-fpga-dev:2025-custom
