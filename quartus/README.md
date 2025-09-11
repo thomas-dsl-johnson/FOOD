@@ -14,7 +14,7 @@ export QUARTUS_ROOTDIR_OVERRIDE=/root/intelFPGA_pro/23.3/quartus
 source /opt/intel/oneapi/setvars.sh --force
 ```
 
-# n.b. Debugging notes
+## n.b. Debugging notes
 wget -c https://downloads.intel.com/akdlm/software/acdsinst/24.1/115/ib_tar/Quartus-pro-24.1.0.115-linux-complete.tar
 apt-get update
 apt-get install libfontconfig1
